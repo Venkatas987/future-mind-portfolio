@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import Particles from "@/components/Particles";
 
 // Replace this URL with your own profile photo link
-const PROFILE_IMAGE_URL = "https://via.placeholder.com/500";
+const PROFILE_IMAGE_URL = "PASTE_YOUR_IMAGE_LINK_HERE";
 
 const Hero = () => (
   <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
