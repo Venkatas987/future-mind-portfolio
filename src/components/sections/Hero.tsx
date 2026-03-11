@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Particles from "@/components/Particles";
+
+// Replace with your actual image URL and resume URL
+const PROFILE_IMAGE_URL = "PASTE_YOUR_IMAGE_LINK_HERE";
+const RESUME_URL = "PASTE_YOUR_RESUME_LINK_HERE";
 
 const Hero = () => (
   <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -33,8 +37,25 @@ const Hero = () => (
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center max-w-2xl mx-auto"
+        className="text-center max-w-2xl mx-auto flex flex-col items-center"
       >
+        {/* Profile Photo */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative mb-6"
+        >
+          <div className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full overflow-hidden border-2 border-primary/50 neon-glow">
+            <img
+              src={PROFILE_IMAGE_URL}
+              alt="Venkata Ganesh"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="absolute inset-0 rounded-full border border-secondary/30 animate-pulse pointer-events-none" />
+        </motion.div>
+
         <p className="font-mono text-sm text-secondary mb-2">Hello, I'm</p>
         <h1 className="text-5xl md:text-7xl font-bold font-heading mb-3">
           Venkata <span className="gradient-text">Ganesh</span>
@@ -50,6 +71,11 @@ const Hero = () => (
             <a href="#projects">View Projects</a>
           </Button>
           <Button variant="outline" size="lg" asChild>
+            <a href={RESUME_URL} download target="_blank" rel="noopener noreferrer">
+              <Download className="mr-1" size={16} /> Resume
+            </a>
+          </Button>
+          <Button variant="ghost" size="lg" asChild>
             <a href="#contact">Contact Me</a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
