@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Particles from "@/components/Particles";
-import profilePhoto from "@/assets/profile-photo.png";
+
+// Replace this URL with your own profile photo link
+const PROFILE_IMAGE_URL = "https://via.placeholder.com/500";
 
 const Hero = () => (
   <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -16,8 +18,8 @@ const Hero = () => (
           transition={{ duration: 0.8 }}
           className="relative"
         >
-          <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-2 border-primary/50 neon-glow">
-            <img src={profilePhoto} alt="Venkata Ganesh" className="w-full h-full object-cover" />
+          <div className="w-[350px] h-[350px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden border-2 border-primary/50 neon-glow">
+            <img src={PROFILE_IMAGE_URL} alt="Venkata Ganesh" className="w-full h-full object-cover" />
           </div>
           <div className="absolute -inset-2 rounded-full border border-primary/20 animate-pulse-glow pointer-events-none" />
         </motion.div>
