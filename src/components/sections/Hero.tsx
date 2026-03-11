@@ -3,59 +3,63 @@ import { ArrowDown, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Particles from "@/components/Particles";
 
-// Replace this URL with your own profile photo link
-const PROFILE_IMAGE_URL = "PASTE_YOUR_IMAGE_LINK_HERE";
-
 const Hero = () => (
   <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
     <Particles />
     <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-background pointer-events-none" />
-    <div className="container mx-auto px-4 relative z-10">
-      <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-          className="relative"
-        >
-          <div className="w-[350px] h-[350px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden border-2 border-primary/50 neon-glow">
-            <img src={PROFILE_IMAGE_URL} alt="Venkata Ganesh" className="w-full h-full object-cover" />
-          </div>
-          <div className="absolute -inset-2 rounded-full border border-primary/20 animate-pulse-glow pointer-events-none" />
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center md:text-left max-w-xl"
-        >
-          <p className="font-mono text-sm text-secondary mb-2">Hello, I'm</p>
-          <h1 className="text-4xl md:text-6xl font-bold font-heading mb-3">
-            Venkata <span className="gradient-text">Ganesh</span>
-          </h1>
-          <p className="text-lg md:text-xl text-primary font-heading mb-4">
-            Software Developer | AI & Machine Learning Enthusiast
-          </p>
-          <p className="text-muted-foreground mb-8 leading-relaxed">
-            Building intelligent systems and real-world AI applications.
-          </p>
-          <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-            <Button variant="neon" size="lg" asChild>
-              <a href="#projects">View Projects</a>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href="#contact">Contact Me</a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href="https://github.com/Venkatas987" target="_blank" rel="noopener noreferrer"><Github /></a>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <a href="#" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
-            </Button>
-          </div>
-        </motion.div>
-      </div>
+    {/* Glowing grid background */}
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div
+        className="absolute inset-0 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
+        }}
+      />
+      <motion.div
+        className="absolute w-[500px] h-[500px] rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+        style={{
+          background: "radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 70%)",
+        }}
+        animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+      />
+    </div>
+
+    <div className="container mx-auto px-4 relative z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-center max-w-2xl mx-auto"
+      >
+        <p className="font-mono text-sm text-secondary mb-2">Hello, I'm</p>
+        <h1 className="text-5xl md:text-7xl font-bold font-heading mb-3">
+          Venkata <span className="gradient-text">Ganesh</span>
+        </h1>
+        <p className="text-lg md:text-xl text-primary font-heading mb-4">
+          Software Developer | AI & Machine Learning Enthusiast
+        </p>
+        <p className="text-muted-foreground mb-8 leading-relaxed">
+          Building intelligent systems and real-world AI applications.
+        </p>
+        <div className="flex flex-wrap gap-3 justify-center">
+          <Button variant="neon" size="lg" asChild>
+            <a href="#projects">View Projects</a>
+          </Button>
+          <Button variant="outline" size="lg" asChild>
+            <a href="#contact">Contact Me</a>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <a href="https://github.com/Venkatas987" target="_blank" rel="noopener noreferrer"><Github /></a>
+          </Button>
+          <Button variant="ghost" size="icon" asChild>
+            <a href="#" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+          </Button>
+        </div>
+      </motion.div>
     </div>
     <motion.a
       href="#about"
