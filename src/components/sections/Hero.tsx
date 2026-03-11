@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Particles from "@/components/Particles";
-import profilePhoto from "@/assets/profile-photo.png";
+
+// Replace this URL with your own profile photo link
+const PROFILE_IMAGE_URL = "https://via.placeholder.com/500";
 
 const Hero = () => (
   <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
