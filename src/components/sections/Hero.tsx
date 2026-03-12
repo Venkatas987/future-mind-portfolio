@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import Particles from "@/components/Particles";
 import { useState, useEffect } from "react";
 
-const PROFILE_IMAGE_URL = "https://drive.google.com/uc?export=view&id=1Qm4nDM2wGFvaurBJu9RtstwXWfpugaob";
 const RESUME_URL = "https://docs.google.com/document/d/1RCLlGSVDJKSAbXXxPzsCZL3ftVwahAB5/export?format=pdf";
 
 const useTypewriter = (text: string, speed = 60) => {
@@ -56,26 +55,6 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-2xl mx-auto flex flex-col items-center"
         >
-          {/* Profile Photo */}
-          <motion.div
-            className="relative mb-6"
-            animate={{ boxShadow: [
-              "0 0 20px hsl(263 70% 58% / 0.4), 0 0 40px hsl(187 80% 54% / 0.2)",
-              "0 0 30px hsl(263 70% 58% / 0.6), 0 0 60px hsl(187 80% 54% / 0.3)",
-              "0 0 20px hsl(263 70% 58% / 0.4), 0 0 40px hsl(187 80% 54% / 0.2)",
-            ]}}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            style={{ borderRadius: "50%" }}
-          >
-            <div className="w-[150px] h-[150px] rounded-full p-[3px] bg-gradient-to-br from-primary via-secondary to-primary">
-              <img
-                src={PROFILE_IMAGE_URL}
-                alt="Venkata Ganesh"
-                className="w-full h-full rounded-full object-cover bg-background"
-              />
-            </div>
-          </motion.div>
-
           <p className="font-mono text-sm text-secondary mb-2">Hello, I'm</p>
           <h1 className="text-5xl md:text-7xl font-bold font-heading mb-3">
             Venkata <span className="gradient-text">Ganesh</span>
@@ -92,7 +71,7 @@ const Hero = () => {
               <a href="#projects">View Projects</a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" download>
                 <Download size={16} /> Download Resume
               </a>
             </Button>
