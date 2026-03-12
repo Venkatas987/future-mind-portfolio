@@ -5,7 +5,7 @@ import Particles from "@/components/Particles";
 import { useState, useEffect } from "react";
 
 const PROFILE_IMAGE_URL = "https://drive.google.com/uc?export=view&id=1Qm4nDM2wGFvaurBJu9RtstwXWfpugaob";
-const RESUME_URL = "#"; // Replace with your Google Drive resume link
+const RESUME_URL = "https://docs.google.com/document/d/1RCLlGSVDJKSAbXXxPzsCZL3ftVwahAB5/export?format=pdf";
 
 const useTypewriter = (text: string, speed = 60) => {
   const [displayed, setDisplayed] = useState("");
