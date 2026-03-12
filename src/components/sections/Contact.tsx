@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, Github, Linkedin, Mail } from "lucide-react";
+import { Send, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "@/components/SectionWrapper";
 import { toast } from "sonner";
@@ -18,7 +18,7 @@ const Contact = () => {
       <div className="container mx-auto max-w-4xl">
         <SectionWrapper>
           <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
-            Get In <span className="gradient-text">Touch</span>
+            Let's <span className="gradient-text">Connect</span>
           </h2>
         </SectionWrapper>
         <div className="grid md:grid-cols-2 gap-8">
@@ -61,16 +61,23 @@ const Contact = () => {
           </SectionWrapper>
           <SectionWrapper delay={0.2}>
             <div className="glass-card p-6 h-full flex flex-col justify-center">
-              <h3 className="font-heading font-semibold mb-6">Let's Connect</h3>
+              <h3 className="font-heading font-semibold mb-6">Get In Touch</h3>
               <div className="space-y-4">
-                <a href="https://github.com/Venkatas987" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
+                <a
+                  href="https://github.com/Venkatas987"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                >
                   <Github size={20} /> <span className="text-sm">github.com/Venkatas987</span>
                 </a>
-                <a href="#" className="flex items-center gap-3 text-muted-foreground hover:text-secondary transition-colors">
-                  <Linkedin size={20} /> <span className="text-sm">LinkedIn Profile</span>
-                </a>
-                <a href="mailto:contact@example.com" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                  <Mail size={20} /> <span className="text-sm">contact@example.com</span>
+                <a
+                  href="https://www.linkedin.com/in/venkataganeshm5/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-secondary transition-colors"
+                >
+                  <Linkedin size={20} /> <span className="text-sm">linkedin.com/in/venkataganeshm5</span>
                 </a>
               </div>
             </div>

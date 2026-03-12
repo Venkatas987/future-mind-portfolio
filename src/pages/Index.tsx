@@ -1,29 +1,33 @@
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
-import Skills from "@/components/sections/Skills";
-import Projects from "@/components/sections/Projects";
-import Experience from "@/components/sections/Experience";
-import Achievements from "@/components/sections/Achievements";
+import Education from "@/components/sections/Education";
 import TechStack from "@/components/sections/TechStack";
-import Blog from "@/components/sections/Blog";
+import DsaSection from "@/components/sections/DsaSection";
+import Projects from "@/components/sections/Projects";
+import Certificates from "@/components/sections/Certificates";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
 const Index = () => (
-  <div className="min-h-screen">
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.6 }}
+    className="min-h-screen"
+  >
     <Navbar />
     <Hero />
     <About />
-    <Skills />
-    <Projects />
-    <Experience />
-    <Achievements />
+    <Education />
     <TechStack />
-    <Blog />
+    <DsaSection />
+    <Projects />
+    <Certificates />
     <Contact />
     <Footer />
-  </div>
+  </motion.div>
 );
 
 export default Index;
