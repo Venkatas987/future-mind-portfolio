@@ -30,7 +30,7 @@ const Projects = () => (
     <div className="container mx-auto max-w-5xl">
       <SectionWrapper>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
-          Featured <span className="gradient-text">Projects</span>
+          <span className="gradient-text">Projects</span>
         </h2>
       </SectionWrapper>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
