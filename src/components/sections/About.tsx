@@ -1,11 +1,11 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import { Brain } from "lucide-react";
 
-const About = () => (
-  <section id="about" className="section-padding">
+const About = () =>
+<section id="about" className="section-padding">
     <div className="container mx-auto max-w-3xl">
       <SectionWrapper>
-        <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12 text-primary">
           About <span className="gradient-text">Me</span>
         </h2>
       </SectionWrapper>
@@ -27,7 +27,7 @@ const About = () => (
         </div>
       </SectionWrapper>
     </div>
-  </section>
-);
+  </section>;
+
 
 export default About;
