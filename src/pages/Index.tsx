@@ -2,11 +2,12 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
-import Education from "@/components/sections/Education";
 import TechStack from "@/components/sections/TechStack";
-import DsaSection from "@/components/sections/DsaSection";
 import Projects from "@/components/sections/Projects";
+import Training from "@/components/sections/Training";
 import Certificates from "@/components/sections/Certificates";
+import Achievements from "@/components/sections/Achievements";
+import Education from "@/components/sections/Education";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
@@ -20,11 +21,12 @@ const Index = () => (
     <Navbar />
     <Hero />
     <About />
-    <Education />
     <TechStack />
-    <DsaSection />
     <Projects />
+    <Training />
     <Certificates />
+    <Achievements />
+    <Education />
     <Contact />
     <Footer />
   </motion.div>

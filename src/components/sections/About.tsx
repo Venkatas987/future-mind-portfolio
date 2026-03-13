@@ -10,10 +10,19 @@ const About = () => (
         </h2>
       </SectionWrapper>
       <SectionWrapper delay={0.1}>
-        <div className="glass-card p-8 text-center">
+        <div className="glass-card p-8 space-y-4">
           <Brain className="text-primary mx-auto mb-5" size={32} />
           <p className="text-muted-foreground leading-relaxed">
-            A Computer Science student with an insatiable curiosity for Artificial Intelligence and Machine Learning. I transform complex problems into intelligent solutions, bridging the gap between theoretical concepts and real-world applications. My passion lies in building software that doesn't just work, but thinks. Currently exploring the frontiers of AI while developing practical tools that make a difference.
+            I am a Computer Science student at Lovely Professional University with a strong interest in Artificial Intelligence, Machine Learning, and software development.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            I enjoy transforming complex ideas into practical software solutions using strong computer science fundamentals and modern AI technologies.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            Through my projects, I have built applications such as disease prediction systems, computer vision models, and data-driven software tools.
+          </p>
+          <p className="text-muted-foreground leading-relaxed">
+            I continuously improve my skills in data structures, algorithms, and machine learning while exploring new technologies that shape the future of intelligent software systems.
           </p>
         </div>
       </SectionWrapper>

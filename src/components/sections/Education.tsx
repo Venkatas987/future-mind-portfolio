@@ -2,7 +2,26 @@ import { GraduationCap } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 import { motion } from "framer-motion";
 
-const focusAreas = ["Artificial Intelligence", "Machine Learning", "Software Engineering"];
+const educationData = [
+  {
+    institution: "Lovely Professional University",
+    degree: "Bachelor of Technology – Computer Science and Engineering",
+    duration: "Aug 2023 – Present",
+    detail: "CGPA: 6.60",
+  },
+  {
+    institution: "Sri Chaitanya College",
+    degree: "Intermediate (PCM)",
+    duration: "",
+    detail: "95%",
+  },
+  {
+    institution: "Oxford Public School",
+    degree: "Matriculation",
+    duration: "",
+    detail: "100%",
+  },
+];
 
 const Education = () => (
   <section id="education" className="section-padding">
@@ -12,25 +31,26 @@ const Education = () => (
           <span className="gradient-text">Education</span>
         </h2>
       </SectionWrapper>
-      <SectionWrapper delay={0.1}>
-        <div className="glass-card p-8 text-center">
-          <GraduationCap className="text-secondary mx-auto mb-4" size={36} />
-          <h3 className="font-heading font-semibold text-xl mb-1">Bachelor of Technology</h3>
-          <p className="text-muted-foreground text-sm mb-1">Computer Science</p>
-          <p className="font-mono text-xs text-secondary mb-5">2023 – 2027</p>
-          <div className="flex flex-wrap gap-2 justify-center">
-            {focusAreas.map((area) => (
-              <motion.span
-                key={area}
-                whileHover={{ scale: 1.05 }}
-                className="font-mono text-xs px-3 py-1.5 rounded-full border border-secondary/30 text-secondary bg-secondary/5"
-              >
-                {area}
-              </motion.span>
-            ))}
-          </div>
-        </div>
-      </SectionWrapper>
+      <div className="space-y-6">
+        {educationData.map((edu, i) => (
+          <SectionWrapper key={edu.institution} delay={i * 0.1}>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="glass-card p-6 group hover:border-primary/40 transition-all duration-300"
+            >
+              <div className="flex items-start gap-4">
+                <GraduationCap className="text-secondary mt-1 shrink-0" size={28} />
+                <div>
+                  <h3 className="font-heading font-semibold text-base mb-1">{edu.institution}</h3>
+                  <p className="text-muted-foreground text-sm">{edu.degree}</p>
+                  {edu.duration && <p className="font-mono text-xs text-secondary mt-1">{edu.duration}</p>}
+                  <p className="font-mono text-xs text-primary mt-1">{edu.detail}</p>
+                </div>
+              </div>
+            </motion.div>
+          </SectionWrapper>
+        ))}
+      </div>
     </div>
   </section>
 );

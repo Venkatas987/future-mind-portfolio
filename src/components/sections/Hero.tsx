@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Download } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Download, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Particles from "@/components/Particles";
 import { useState, useEffect } from "react";
+import profilePhoto from "@/assets/profile-photo.png";
 
 const RESUME_URL = "https://docs.google.com/document/d/1RCLlGSVDJKSAbXXxPzsCZL3ftVwahAB5/export?format=pdf";
 
@@ -21,14 +22,13 @@ const useTypewriter = (text: string, speed = 60) => {
 };
 
 const Hero = () => {
-  const tagline = useTypewriter("Software Developer | AI & Machine Learning Enthusiast", 50);
+  const tagline = useTypewriter("Software Developer | Machine Learning Enthusiast", 50);
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <Particles />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-background pointer-events-none" />
 
-      {/* Glowing grid background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.07]"
@@ -55,28 +55,45 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="text-center max-w-2xl mx-auto flex flex-col items-center"
         >
+          {/* Profile Photo */}
+          <motion.div
+            className="relative mb-6"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden relative z-10 border-2 border-primary/50">
+              <img
+                src={profilePhoto}
+                alt="Mandalapu Venkat Ganesh Reddy"
+                className="w-full h-full object-cover object-top brightness-110 contrast-105"
+              />
+            </div>
+            <div className="absolute inset-0 rounded-full animate-pulse-glow neon-glow" />
+            <div className="absolute -inset-1 rounded-full neon-glow-secondary opacity-50 animate-pulse-glow" style={{ animationDelay: "1s" }} />
+          </motion.div>
+
           <p className="font-mono text-sm text-secondary mb-2">Hello, I'm</p>
-          <h1 className="text-5xl md:text-7xl font-bold font-heading mb-3">
-            Venkata <span className="gradient-text">Ganesh</span>
+          <h1 className="text-4xl md:text-6xl font-bold font-heading mb-3">
+            Mandalapu <span className="gradient-text">Venkat Ganesh</span> Reddy
           </h1>
           <p className="text-lg md:text-xl text-primary font-heading mb-2 h-8">
             {tagline}
             <span className="animate-pulse">|</span>
           </p>
-          <p className="text-muted-foreground mb-8 leading-relaxed">
-            Building intelligent systems and real-world AI applications.
+          <p className="text-muted-foreground mb-8 leading-relaxed max-w-lg">
+            Building intelligent software systems and machine learning solutions that solve real-world problems.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Button variant="neon" size="lg" asChild>
-              <a href="#projects">View Projects</a>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
               <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" download>
                 <Download size={16} /> Download Resume
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="#contact">Contact</a>
+              <a href="#contact">
+                <Mail size={16} /> Contact Me
+              </a>
             </Button>
           </div>
           <div className="flex gap-3 mt-5">

@@ -3,19 +3,20 @@ import SectionWrapper from "@/components/SectionWrapper";
 import { motion } from "framer-motion";
 
 const certs = [
-  { title: "Data Structures and Algorithms Certification", platform: "Certification Platform" },
-  { title: "AI Generative Tools Certification", platform: "Certification Platform" },
+  { title: "Master Generative AI & AI Tools", platform: "Udemy" },
+  { title: "The Bits and Bytes of Computer Networking", platform: "Coursera" },
+  { title: "Data Structures & Algorithms", platform: "Board Infinity" },
 ];
 
 const Certificates = () => (
-  <section id="certificates" className="section-padding">
+  <section id="certifications" className="section-padding">
     <div className="container mx-auto max-w-4xl">
       <SectionWrapper>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
           <span className="gradient-text">Certifications</span>
         </h2>
       </SectionWrapper>
-      <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+      <div className="grid sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
         {certs.map((c, i) => (
           <SectionWrapper key={c.title} delay={i * 0.1}>
             <motion.div

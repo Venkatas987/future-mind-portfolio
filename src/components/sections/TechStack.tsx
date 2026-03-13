@@ -3,33 +3,37 @@ import SectionWrapper from "@/components/SectionWrapper";
 
 const categories = [
   {
-    title: "Programming Languages",
-    skills: ["Python", "C++", "JavaScript"],
+    title: "Languages",
+    skills: ["Python", "Java", "C", "C++", "JavaScript"],
   },
   {
     title: "Frameworks & Libraries",
-    skills: ["React", "Flask"],
+    skills: ["Flask", "Django", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Keras"],
   },
   {
-    title: "Machine Learning & AI",
-    skills: ["TensorFlow", "Scikit-learn", "OpenCV", "Pandas", "NumPy"],
+    title: "Databases",
+    skills: ["SQL", "PostgreSQL"],
   },
   {
-    title: "Developer Tools",
-    skills: ["Git", "Docker", "VS Code", "Linux"],
+    title: "Tools & Platforms",
+    skills: ["Git", "GitHub", "Docker", "Jenkins", "Linux", "GitHub Actions", "YAML"],
   },
   {
-    title: "Core CS Concepts",
-    skills: ["Data Structures", "Algorithms", "OOP", "Operating Systems", "DBMS", "Computer Networks"],
+    title: "Core Concepts",
+    skills: ["Data Structures & Algorithms", "OOP", "DBMS", "Computer Networks", "Operating Systems", "Machine Learning"],
+  },
+  {
+    title: "Soft Skills",
+    skills: ["Problem Solving", "Teamwork", "Adaptability", "Project Ownership", "Communication"],
   },
 ];
 
 const TechStack = () => (
-  <section id="techstack" className="section-padding">
+  <section id="skills" className="section-padding">
     <div className="container mx-auto max-w-5xl">
       <SectionWrapper>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12">
-          Tech Stack & <span className="gradient-text">Expertise</span>
+          Skills & <span className="gradient-text">Expertise</span>
         </h2>
       </SectionWrapper>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
