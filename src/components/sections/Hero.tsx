@@ -34,18 +34,18 @@ const Hero = () => {
           className="absolute inset-0 opacity-[0.07]"
           style={{
             backgroundImage:
-              "linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
+            "linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)",
+            backgroundSize: "60px 60px"
+          }} />
+        
         <motion.div
           className="absolute w-[500px] h-[500px] rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
           style={{
-            background: "radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 70%)",
+            background: "radial-gradient(circle, hsl(var(--primary) / 0.15) 0%, transparent 70%)"
           }}
           animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0.8, 0.5] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }} />
+        
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -53,21 +53,21 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-2xl mx-auto flex flex-col items-center"
-        >
+          className="text-center max-w-2xl mx-auto flex flex-col items-center">
+          
           {/* Profile Photo */}
           <motion.div
             className="relative mb-6"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+            transition={{ duration: 0.6, delay: 0.2 }}>
+            
             <div className="w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden relative z-10 border-2 border-primary/50">
               <img
-                src={profilePhoto}
+
                 alt="Mandalapu Venkat Ganesh Reddy"
-                className="w-full h-full object-cover object-top brightness-110 contrast-105"
-              />
+                className="w-full h-full object-cover object-top brightness-110 contrast-105" src="/lovable-uploads/ed9798a1-b766-40cd-a005-b6951067900b.png" />
+              
             </div>
             <div className="absolute inset-0 rounded-full animate-pulse-glow neon-glow" />
             <div className="absolute -inset-1 rounded-full neon-glow-secondary opacity-50 animate-pulse-glow" style={{ animationDelay: "1s" }} />
@@ -111,12 +111,12 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-float"
-      >
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors animate-float">
+        
         <ArrowDown size={24} />
       </motion.a>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;
