@@ -1,4 +1,4 @@
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "@/components/SectionWrapper";
 import { motion } from "framer-motion";
@@ -7,16 +7,21 @@ const projects = [
   {
     title: "AI Healthcare Triage Assistant",
     description:
-      "AI-powered healthcare system that analyzes symptoms and provides healthcare guidance using machine learning.",
-    tech: ["Python", "Machine Learning", "NLP"],
+      "Built an AI-based symptom checker using a Random Forest model to predict diseases from 132 symptoms across 41 diseases with 97.6% accuracy.",
+    tech: ["Python", "Flask", "Scikit-learn", "Pandas", "HTML", "CSS", "JavaScript"],
     github: "https://github.com/Venkatas987/ai-healthcare-triage-assistant",
   },
   {
-    title: "Plant Disease Detection UI",
+    title: "AI-Based Plant Disease Detection System",
     description:
-      "Web interface allowing users to upload plant images and detect plant diseases using computer vision.",
-    tech: ["Python", "Computer Vision", "Machine Learning"],
-    github: "https://github.com/Venkatas987/plant_disease_ui",
+      "Developed a CNN-based image classification model using TensorFlow and Keras to detect plant diseases from leaf images.",
+    tech: ["Python", "TensorFlow", "Keras", "Streamlit", "OpenCV", "NumPy"],
+  },
+  {
+    title: "Student Marks Management System",
+    description:
+      "Python-based system for managing student academic records with automatic grade and average calculation.",
+    tech: ["Python", "Google Colab", "GitHub"],
   },
 ];
 
@@ -28,15 +33,14 @@ const Projects = () => (
           Featured <span className="gradient-text">Projects</span>
         </h2>
       </SectionWrapper>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((p, i) => (
           <SectionWrapper key={p.title} delay={i * 0.15}>
             <motion.div
               whileHover={{ y: -6 }}
               className="glass-card p-6 h-full flex flex-col group hover:border-primary/40 transition-all duration-300 hover:neon-glow"
             >
-              {/* Image placeholder */}
-              <div className="w-full h-40 rounded-lg bg-muted/30 border border-border mb-4 flex items-center justify-center">
+              <div className="w-full h-36 rounded-lg bg-muted/30 border border-border mb-4 flex items-center justify-center">
                 <span className="text-muted-foreground text-xs font-mono">Project Preview</span>
               </div>
               <h3 className="font-heading font-semibold text-lg mb-2">{p.title}</h3>
@@ -51,13 +55,15 @@ const Projects = () => (
                   </span>
                 ))}
               </div>
-              <div className="flex gap-3">
-                <Button variant="outline" size="sm" asChild>
-                  <a href={p.github} target="_blank" rel="noopener noreferrer">
-                    <Github size={14} /> GitHub
-                  </a>
-                </Button>
-              </div>
+              {p.github && (
+                <div className="flex gap-3">
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={p.github} target="_blank" rel="noopener noreferrer">
+                      <Github size={14} /> GitHub
+                    </a>
+                  </Button>
+                </div>
+              )}
             </motion.div>
           </SectionWrapper>
         ))}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Send, Github, Linkedin } from "lucide-react";
+import { Send, Github, Linkedin, Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionWrapper from "@/components/SectionWrapper";
 import { toast } from "sonner";
@@ -63,6 +63,18 @@ const Contact = () => {
             <div className="glass-card p-6 h-full flex flex-col justify-center">
               <h3 className="font-heading font-semibold mb-6">Get In Touch</h3>
               <div className="space-y-4">
+                <a
+                  href="mailto:mganeshreddy688@gmail.com"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Mail size={20} /> <span className="text-sm">mganeshreddy688@gmail.com</span>
+                </a>
+                <a
+                  href="tel:+918919020554"
+                  className="flex items-center gap-3 text-muted-foreground hover:text-secondary transition-colors"
+                >
+                  <Phone size={20} /> <span className="text-sm">+91 8919020554</span>
+                </a>
                 <a
                   href="https://github.com/Venkatas987"
                   target="_blank"

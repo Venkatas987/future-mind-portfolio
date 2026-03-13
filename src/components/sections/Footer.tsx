@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="container mx-auto flex flex-col items-center gap-4">
       <nav className="flex gap-6 text-xs text-muted-foreground">
         <a href="#about" className="hover:text-primary transition-colors">About</a>
-        <a href="#techstack" className="hover:text-primary transition-colors">Tech Stack</a>
+        <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
         <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
         <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
       </nav>
@@ -17,7 +17,7 @@ const Footer = () => (
           <Linkedin size={16} />
         </a>
       </div>
-      <p className="text-[11px] text-muted-foreground">© 2025 Venkata Ganesh</p>
+      <p className="text-[11px] text-muted-foreground">© 2026 Mandalapu Venkat Ganesh Reddy</p>
     </div>
   </footer>
 );
