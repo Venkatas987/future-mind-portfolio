@@ -1,8 +1,8 @@
 import SectionWrapper from "@/components/SectionWrapper";
 import { Brain } from "lucide-react";
 
-const About = () =>
-<section id="about" className="section-padding">
+const About = () => (
+  <section id="about" className="section-padding">
     <div className="container mx-auto max-w-3xl">
       <SectionWrapper>
         <h2 className="text-3xl md:text-4xl font-bold font-heading text-center mb-12 text-primary">
@@ -13,21 +13,21 @@ const About = () =>
         <div className="glass-card p-8 space-y-4">
           <Brain className="text-primary mx-auto mb-5" size={32} />
           <p className="text-muted-foreground leading-relaxed">
-            I am a Computer Science student at Lovely Professional University with a strong interest in Artificial Intelligence, Machine Learning, and software development.
+            I am a Computer Science student at Lovely Professional University passionate about Artificial Intelligence, Machine Learning, and intelligent software development.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I enjoy transforming complex ideas into practical software solutions using strong computer science fundamentals and modern AI technologies.
+            I enjoy building practical systems that combine strong programming fundamentals with machine learning algorithms to solve real-world problems.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Through my projects, I have built applications such as disease prediction systems, computer vision models, and data-driven software tools.
+            Through my projects I have worked on healthcare prediction systems, computer vision models, and data-driven applications.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            I continuously improve my skills in data structures, algorithms, and machine learning while exploring new technologies that shape the future of intelligent software systems.
+            My goal is to continuously improve my expertise in machine learning, backend development, and scalable software architecture while contributing to impactful technology solutions.
           </p>
         </div>
       </SectionWrapper>
     </div>
-  </section>;
-
+  </section>
+);
 
 export default About;

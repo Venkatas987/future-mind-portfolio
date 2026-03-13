@@ -4,9 +4,10 @@ const Footer = () => (
   <footer className="border-t border-border py-8 px-4">
     <div className="container mx-auto flex flex-col items-center gap-4">
       <nav className="flex gap-6 text-xs text-muted-foreground">
+        <a href="#hero" className="hover:text-primary transition-colors">Home</a>
         <a href="#about" className="hover:text-primary transition-colors">About</a>
-        <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
         <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
+        <a href="#certifications" className="hover:text-primary transition-colors">Certificates</a>
         <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
       </nav>
       <div className="flex gap-3">
@@ -17,7 +18,7 @@ const Footer = () => (
           <Linkedin size={16} />
         </a>
       </div>
-      <p className="text-[11px] text-muted-foreground">© 2026 Mandalapu Venkat Ganesh Reddy</p>
+      <p className="text-[11px] text-muted-foreground">© 2026 Venkata Ganesh</p>
     </div>
   </footer>
 );
