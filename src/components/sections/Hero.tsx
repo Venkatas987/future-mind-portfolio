@@ -75,7 +75,7 @@ const Hero = () => {
 
           <p className="font-mono text-sm text-secondary mb-2">Hello, I'm</p>
           <h1 className="text-4xl md:text-6xl font-bold font-heading mb-3">
-            Mandalapu <span className="gradient-text">Venkat Ganesh</span> Reddy
+            <span className="gradient-text">Venkata Ganesh</span>
           </h1>
           <p className="text-lg md:text-xl text-primary font-heading mb-2 h-8">
             {tagline}
