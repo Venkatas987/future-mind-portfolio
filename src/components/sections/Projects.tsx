@@ -72,7 +72,7 @@ const Projects = () =>
             <div className="flex gap-3">
                     <Button variant="outline" size="sm" asChild>
                       <a href={p.github} target="_blank" rel="noopener noreferrer">
-                        <Github size={14} /> GitHub
+                        <Github size={14} /> View on GitHub
                       </a>
                     </Button>
                   </div>

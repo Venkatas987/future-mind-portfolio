@@ -42,9 +42,11 @@ const TechStack = () => (
               }}
               className="glass-card aspect-square flex flex-col items-center justify-center gap-2 p-3 cursor-default group hover:border-primary/50 transition-all duration-300"
             >
-              <span className="text-2xl md:text-3xl group-hover:scale-110 transition-transform duration-300">
-                {skill.icon}
-              </span>
+              <img
+                src={skill.icon}
+                alt={skill.name}
+                className="w-8 h-8 md:w-10 md:h-10 group-hover:scale-110 transition-transform duration-300"
+              />
               <span className="font-mono text-[10px] md:text-xs text-muted-foreground group-hover:text-foreground transition-colors text-center leading-tight">
                 {skill.name}
               </span>
