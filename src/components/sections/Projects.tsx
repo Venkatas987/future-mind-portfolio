@@ -20,6 +20,7 @@ const projects = [
   description:
   "Developed a CNN-based image classification model using TensorFlow and Keras to detect plant diseases from leaf images.",
   tech: ["Python", "TensorFlow", "Keras", "Streamlit", "OpenCV", "NumPy"],
+  github: "https://github.com/Venkatas987/plant_disease_ui",
   image: projectPlant
 },
 {
@@ -27,6 +28,7 @@ const projects = [
   description:
   "Python-based system for managing student academic records with automatic grade and average calculation.",
   tech: ["Python", "Google Colab", "GitHub"],
+  github: "https://github.com/Venkatas987/student-marks-management",
   image: projectStudent
 }];
 
@@ -70,7 +72,7 @@ const Projects = () =>
             <div className="flex gap-3">
                     <Button variant="outline" size="sm" asChild>
                       <a href={p.github} target="_blank" rel="noopener noreferrer">
-                        <Github size={14} /> GitHub
+                        <Github size={14} /> View on GitHub
                       </a>
                     </Button>
                   </div>
