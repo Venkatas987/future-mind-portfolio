@@ -86,8 +86,13 @@ const Hero = () => {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Button variant="neon" size="lg" asChild>
-              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" download>
-                <Download size={16} /> Download Resume
+              <a href={CV_URL} target="_blank" rel="noopener noreferrer">
+                <Download size={16} /> View CV
+              </a>
+            </Button>
+            <Button variant="neon" size="lg" asChild>
+              <a href={CV_URL} download="Venkata_Ganesh.pdf">
+                <Download size={16} /> Download CV
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
