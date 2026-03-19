@@ -5,7 +5,7 @@ import Particles from "@/components/Particles";
 import { useState, useEffect } from "react";
 import profilePhoto from "@/assets/profile-photo.png";
 
-const RESUME_URL = "https://docs.google.com/document/d/1RCLlGSVDJKSAbXXxPzsCZL3ftVwahAB5/export?format=pdf";
+const CV_URL = "https://github.com/Venkatas987/portfolio/raw/main/Venkata_Ganesh.pdf";
 
 const useTypewriter = (text: string, speed = 60) => {
   const [displayed, setDisplayed] = useState("");
