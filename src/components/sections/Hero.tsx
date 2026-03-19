@@ -5,7 +5,7 @@ import Particles from "@/components/Particles";
 import { useState, useEffect } from "react";
 import profilePhoto from "@/assets/profile-photo.png";
 
-const RESUME_URL = "https://docs.google.com/document/d/1RCLlGSVDJKSAbXXxPzsCZL3ftVwahAB5/export?format=pdf";
+const CV_URL = "https://github.com/Venkatas987/portfolio/raw/main/Venkata_Ganesh.pdf";
 
 const useTypewriter = (text: string, speed = 60) => {
   const [displayed, setDisplayed] = useState("");
@@ -86,8 +86,13 @@ const Hero = () => {
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
             <Button variant="neon" size="lg" asChild>
-              <a href={RESUME_URL} target="_blank" rel="noopener noreferrer" download>
-                <Download size={16} /> Download Resume
+              <a href={CV_URL} target="_blank" rel="noopener noreferrer">
+                <Download size={16} /> View CV
+              </a>
+            </Button>
+            <Button variant="neon" size="lg" asChild>
+              <a href={CV_URL} download="Venkata_Ganesh.pdf">
+                <Download size={16} /> Download CV
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild>
