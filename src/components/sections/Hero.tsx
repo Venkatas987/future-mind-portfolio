@@ -66,7 +66,7 @@ const Hero = () => {
               <img
 
                 alt="Mandalapu Venkat Ganesh Reddy"
-                className="w-full h-full object-cover object-top brightness-110 contrast-105" src="/lovable-uploads/ed9798a1-b766-40cd-a005-b6951067900b.png" />
+                className="w-full h-full object-cover object-top brightness-110 contrast-105" src="/lovable-uploads/a67eae6c-17e1-4266-96cd-b4fa5a3e47ab.png" />
               
             </div>
             <div className="absolute inset-0 rounded-full animate-pulse-glow neon-glow" />
