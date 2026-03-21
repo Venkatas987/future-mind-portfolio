@@ -54,15 +54,6 @@ My goal is straightforward: build technology that improves decision-making, opti
 
 
         </p>
-          <p className="text-muted-foreground leading-relaxed">
-            I enjoy building practical systems that combine strong programming fundamentals with machine learning algorithms to solve real-world problems.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Through my projects I have worked on healthcare prediction systems, computer vision models, and data-driven applications.
-          </p>
-          <p className="text-muted-foreground leading-relaxed">
-            My goal is to continuously improve my expertise in machine learning, backend development, and scalable software architecture while contributing to impactful technology solutions.
-          </p>
         </div>
       </SectionWrapper>
     </div>
