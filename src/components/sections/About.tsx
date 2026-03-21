@@ -12,48 +12,26 @@ const About = () =>
       <SectionWrapper delay={0.1}>
         <div className="glass-card p-8 space-y-4">
           <Brain className="text-primary mx-auto mb-5" size={32} />
-          <p className="text-muted-foreground leading-relaxed">
-            ​I’m a Computer Science student at Lovely Professional University focused on building systems that solve real-world problems—not just academic exercises.
-
-My interest in AI started with a simple question: Can machines actually think?
-Today, I work on answering that through practical applications—developing machine learning models for healthcare prediction, building computer vision systems that interpret visual data, and creating intelligent applications that learn from patterns.
-
-I focus on end-to-end system development—from data preprocessing and model building to deployment—turning unstructured problems into usable solutions.
-
-What differentiates me is execution.
-I don’t just experiment with models; I aim to make them reliable, scalable, and applicable in real scenarios.
-
-My goal is straightforward: build technology that improves decision-making, optimizes processes, and creates measurable impact.
-
-
-          
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-        
-        
-
-
-
-
-
-        </p>
+          <div className="space-y-4 text-muted-foreground leading-relaxed">
+            <p>
+              I'm a Computer Science student at Lovely Professional University focused on building systems that solve real-world problems—not just academic exercises.
+            </p>
+            <p>
+              My interest in AI started with a simple question: Can machines actually think?
+            </p>
+            <p>
+              Today, I work on answering that through practical applications—developing machine learning models for healthcare prediction, building computer vision systems that interpret visual data, and creating intelligent applications that learn from patterns.
+            </p>
+            <p>
+              I focus on end-to-end system development—from data preprocessing and model building to deployment—turning unstructured problems into usable solutions.
+            </p>
+            <p>
+              What differentiates me is execution. I don't just experiment with models; I aim to make them reliable, scalable, and applicable in real scenarios.
+            </p>
+            <p>
+              My goal is straightforward: build technology that improves decision-making, optimizes processes, and creates measurable impact.
+            </p>
+          </div>
         </div>
       </SectionWrapper>
     </div>
