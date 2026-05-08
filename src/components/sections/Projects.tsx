@@ -4,7 +4,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import { motion } from "framer-motion";
 import projectHealthcare from "@/assets/project-healthcare.jpg";
 import projectPlant from "@/assets/project-plant.jpg";
-import projectStudent from "@/assets/project-student.jpg";
+import projectFeedback from "@/assets/project-feedback.jpg";
 
 const projects = [
 {
@@ -24,12 +24,12 @@ const projects = [
   image: projectPlant
 },
 {
-  title: "Student Marks Management System",
+  title: "Student Feedback Clustering for Institutional Quality Improvement",
   description:
-  "Python-based system for managing student academic records with automatic grade and average calculation.",
-  tech: ["Python", "Google Colab", "GitHub"],
-  github: "https://github.com/Venkatas987/student-marks-management",
-  image: projectStudent
+  "Developed an NLP-based unsupervised learning system to analyze and cluster student feedback using TF-IDF vectorization and KMeans clustering for institutional quality analysis and insight generation.",
+  tech: ["Python", "Scikit-learn", "NLTK", "TF-IDF", "KMeans", "Pandas"],
+  github: "https://github.com/Venkatas987",
+  image: projectFeedback
 }];
 
 
