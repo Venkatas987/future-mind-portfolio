@@ -7,7 +7,7 @@ const educationData = [
     institution: "Lovely Professional University",
     degree: "Bachelor of Technology – Computer Science and Engineering",
     duration: "Aug 2023 – Present",
-    detail: "CGPA: 6.60",
+    detail: "CGPA: 6.90",
   },
   {
     institution: "Sri Chaitanya College",
